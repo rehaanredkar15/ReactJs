@@ -1,0 +1,13 @@
+//var React = require('react'); //for html embedding 
+//var ReactDOM = require('react'); // for manipulation of DOM
+
+
+//following syntax is for es6 which will be converted to above commented syntax by BABELING
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const name = "rehan";
+
+ReactDOM.render(<>
+  <h1 contentEditable="true" >My name is {name}</h1>
+</>, document.getElementById("root"));

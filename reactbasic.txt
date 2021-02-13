@@ -1,0 +1,32 @@
+//var React = require('react'); //for html embedding 
+//var ReactDOM = require('react'); // for manipulation of DOM
+
+
+//following syntax is for es6 which will be converted to above commented syntax by BABELING
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+//ReactDOM.render('kya dikhana hai ', 'kaha dikhana hai','callback func')
+//Babel is the modern javascript compiler that is ecma script compiler 
+
+const fname = "rehan";
+const lname = "redkar";
+/*
+ReactDOM.render(
+  <React.Fragment>
+    <h1>my name is {fname}{lname} </h1>,
+  <p>rehan</p>
+    </React.Fragment>
+  , document.getElementById("root"));
+*/
+
+
+ReactDOM.render(
+   <>
+      <h1>my name is {fname}{lname} </h1>
+    <h1>my name is {fname + lname} </h1>
+    <h1>{`my name is  ${fname} ${lname}  using template literal `}  </h1>
+      <p>rehan</p>
+    </>,
+  document.getElementById("root")
+);

@@ -1,0 +1,45 @@
+//var React = require('react'); //for html embedding 
+//var ReactDOM = require('react'); // for manipulation of DOM
+
+
+//following syntax is for es6 which will be converted to above commented syntax by BABELING
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const name = "rehan";
+const currhour = new Date().toLocaleTimeString();
+// let currhour = new Date(2020, 5, 5, 15);
+// currhour = currhour.getHours();
+
+let cssStyle = { };
+
+let greeting =" ";
+if (currhour >= 1 && currhour < 12)
+{
+  greeting = "FAJR";
+  cssStyle.color = "orange";
+
+} else if (currhour >= 12 && currhour < 18)
+{
+  greeting = "Zohar and asar";
+  cssStyle.color = "yellow";
+
+} else if(currhour >=18 && currhour <19){
+  
+  greeting = "Maghrib";
+  cssStyle.color = "red";
+  
+}else{
+  
+  greeting = "Isha"; 
+  cssStyle.color = "black";
+}
+
+
+ReactDOM.render(<>
+<div>
+    <h1>
+       hello sir , <span style={cssStyle}> {name} {greeting} </span>Padlo
+   </h1>
+ </div>
+</>,document.getElementById("root"));
